@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/arnozhang/js-utils.git"
+    "url": "git+https://github.com/arnozhang/js-utils-lite.git"
   },
   "keywords": [
     "JavaScript",
@@ -17,7 +17,7 @@
   "author": "arnozhang",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/arnozhang/js-utils/issues"
+    "url": "https://github.com/arnozhang/js-utils-lite/issues"
   },
-  "homepage": "https://github.com/arnozhang/js-utils#readme"
+  "homepage": "https://github.com/arnozhang/js-utils-lite#readme"
 }
