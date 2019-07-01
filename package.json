@@ -1,0 +1,23 @@
+{
+  "name": "js-utils",
+  "version": "1.0.0",
+  "description": "Utils methods/components for JavaScript.",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arnozhang/js-utils.git"
+  },
+  "keywords": [
+    "JavaScript",
+    "Utils"
+  ],
+  "author": "arnozhang",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/arnozhang/js-utils/issues"
+  },
+  "homepage": "https://github.com/arnozhang/js-utils#readme"
+}
