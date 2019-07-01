@@ -1,5 +1,5 @@
 {
-  "name": "js-utils",
+  "name": "js-utils-lite",
   "version": "1.0.0",
   "description": "Utils methods/components for JavaScript.",
   "main": "index.js",
