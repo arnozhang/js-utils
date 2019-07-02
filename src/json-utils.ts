@@ -38,26 +38,6 @@ export default class JsonUtils {
         return defArray;
     }
 
-    static parseIntSafe(content: string, defInt?: number): number {
-        try {
-            return parseInt(content);
-        } catch (e) {
-            Logger.e(TAG, `parseInt '${content}' error: ${e}`);
-        }
-
-        return defInt;
-    }
-
-    static parseFloatSafe(content: string, defFloat?: number): number {
-        try {
-            return parseFloat(content);
-        } catch (e) {
-            Logger.e(TAG, `parseFloat '${content}' error: ${e}`);
-        }
-
-        return defFloat;
-    }
-
     static toJSONString(value: any, pretty?: boolean): string {
         if (pretty == true) {
             return JSON.stringify(value, null, 2);

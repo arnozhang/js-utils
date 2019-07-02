@@ -13,7 +13,7 @@
         "moduleResolution": "node",
         "declaration": true,
         "outDir": "./lib",
-        "sourceMap": true
+        //"sourceMap": true
     },
     "exclude": [
         "node_modules",

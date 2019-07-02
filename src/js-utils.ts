@@ -45,7 +45,16 @@ export default class JsUtils {
         return typeof (value) === 'function';
     }
 
-    static parseIntSafe(content: string, defInt?: number): number {
+    static parseIntSafe(content: any, defInt?: number): number {
+        if (content == null) {
+            return defInt;
+        } if (JsUtils.isNumber(content)) {
+            return parseInt(`${content}`);
+        } else if (!JsUtils.isString(content)) {
+            Logger.e(TAG, `parseInt '${content}' is not string. type = ${typeof (content)}`);
+            return defInt;
+        }
+
         try {
             return parseInt(content);
         } catch (e) {
@@ -55,7 +64,16 @@ export default class JsUtils {
         return defInt;
     }
 
-    static parseFloatSafe(content: string, defFloat?: number): number {
+    static parseFloatSafe(content: any, defFloat?: number): number {
+        if (content == null) {
+            return defFloat;
+        } if (JsUtils.isNumber(content)) {
+            return content;
+        } else if (!JsUtils.isString(content)) {
+            Logger.e(TAG, `parseFloat '${content}' is not string. type = ${typeof (content)}`);
+            return defFloat;
+        }
+
         try {
             return parseFloat(content);
         } catch (e) {
@@ -63,32 +81,5 @@ export default class JsUtils {
         }
 
         return defFloat;
-    }
-
-    static arrayContains(array: any[], value: any): boolean {
-        if (!array) {
-            return false;
-        }
-
-        for (let item of array) {
-            if (item == value) {
-                return true;
-            }
-        }
-
-        return false;
-    }
-
-    static startsWith(value: string, sub: string): boolean {
-        return value.indexOf(sub) == 0;
-    }
-
-    static endsWith(value: string, sub: string): boolean {
-        return value.substring(value.length - sub.length, value.length) === sub;
-    }
-
-    static openInNewTab(url: string) {
-        const win = window.open(url, '_blank');
-        win.focus();
     }
 }
