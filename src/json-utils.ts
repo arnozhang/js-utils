@@ -38,7 +38,7 @@ export default class JsonUtils {
         return defArray;
     }
 
-    static toJSONString(value: any, pretty?: boolean): string {
+    static toJsonString(value: any, pretty?: boolean): string {
         if (pretty == true) {
             return JSON.stringify(value, null, 2);
         }
