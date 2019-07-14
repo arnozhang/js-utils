@@ -9,8 +9,12 @@ export class LogWriter {
         console.log(message);
     }
 
-    formatLog(level: String, tag: string, message: any): string {
-        return `${level} [${tag}]: ${message}`;
+    formatLog(level: String, tagOrMessage: any, message?: any): string {
+        if (message != null) {
+            return `${level} [${tagOrMessage}]: ${message}`;
+        }
+
+        return `${level} ${tagOrMessage}`;
     }
 }
 
@@ -34,31 +38,31 @@ export default class Logger {
         Logger.writer = newWriter;
     }
 
-    static v(tag: string, message: any) {
-        Logger._log(LogLevel.verbose, tag, message);
+    static v(tagOrMessage: any, message?: any) {
+        Logger._log(LogLevel.verbose, tagOrMessage, message);
     }
 
-    static d(tag: string, message: any) {
-        Logger._log(LogLevel.debug, tag, message);
+    static d(tagOrMessage: any, message?: any) {
+        Logger._log(LogLevel.debug, tagOrMessage, message);
     }
 
-    static i(tag: string, message: any) {
-        Logger._log(LogLevel.info, tag, message);
+    static i(tagOrMessage: any, message?: any) {
+        Logger._log(LogLevel.info, tagOrMessage, message);
     }
 
-    static w(tag: string, message: any) {
-        Logger._log(LogLevel.warn, tag, message);
+    static w(tagOrMessage: any, message?: any) {
+        Logger._log(LogLevel.warn, tagOrMessage, message);
     }
 
-    static e(tag: string, message: any) {
-        Logger._log(LogLevel.error, tag, message);
+    static e(tagOrMessage: any, message?: any) {
+        Logger._log(LogLevel.error, tagOrMessage, message);
     }
 
-    static f(tag: string, message: any) {
-        Logger._log(LogLevel.fatal, tag, message);
+    static f(tagOrMessage: any, message?: any) {
+        Logger._log(LogLevel.fatal, tagOrMessage, message);
     }
 
-    static _log(level: String, tag: string, message: any) {
-        Logger.writer.writeLog(Logger.writer.formatLog(level, tag, message));
+    private static _log(level: String, tagOrMessage: any, message?: any) {
+        Logger.writer.writeLog(Logger.writer.formatLog(level, tagOrMessage, message));
     }
 }
