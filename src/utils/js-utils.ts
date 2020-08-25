@@ -1,4 +1,4 @@
-import Logger from "./logger";
+import { Logger } from "..";
 
 /**
  * @author arnozhang
@@ -7,7 +7,7 @@ import Logger from "./logger";
 
 const TAG = 'JsUtils';
 
-export default class JsUtils {
+export class JsUtils {
 
     static isEmpty(value: any): boolean {
         return value == null || value.length <= 0;
@@ -48,7 +48,8 @@ export default class JsUtils {
     static parseIntSafe(content: any, defInt?: number): number {
         if (content == null) {
             return defInt;
-        } if (JsUtils.isNumber(content)) {
+        }
+        if (JsUtils.isNumber(content)) {
             return parseInt(`${content}`);
         } else if (!JsUtils.isString(content)) {
             Logger.e(TAG, `parseInt '${content}' is not string. type = ${typeof (content)}`);
@@ -67,7 +68,8 @@ export default class JsUtils {
     static parseFloatSafe(content: any, defFloat?: number): number {
         if (content == null) {
             return defFloat;
-        } if (JsUtils.isNumber(content)) {
+        }
+        if (JsUtils.isNumber(content)) {
             return content;
         } else if (!JsUtils.isString(content)) {
             Logger.e(TAG, `parseFloat '${content}' is not string. type = ${typeof (content)}`);

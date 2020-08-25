@@ -29,7 +29,7 @@ export enum LogLevel {
 }
 
 
-export default class Logger {
+export class Logger {
 
     static writer?: LogWriter = new LogWriter();
 

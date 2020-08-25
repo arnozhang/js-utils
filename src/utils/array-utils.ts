@@ -1,4 +1,4 @@
-import JsUtils from "./js-utils";
+import { JsUtils } from "./js-utils";
 
 /**
  * @author arnozhang
@@ -7,7 +7,7 @@ import JsUtils from "./js-utils";
 
 const TAG = 'ArrayUtils';
 
-export default class ArrayUtils {
+export class ArrayUtils {
 
     static newArray<T>(length: number, value?: T): T[] {
         return new Array(length).fill(value);

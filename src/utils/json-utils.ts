@@ -1,5 +1,5 @@
-import JsUtils from "./js-utils";
-import Logger from "./logger";
+import { JsUtils } from "./js-utils";
+import { Logger } from "..";
 
 /**
  * @author arnozhang
@@ -10,7 +10,7 @@ const TAG = 'JsonUtils';
 
 export type ErrorHandler = (err: string) => void;
 
-export default class JsonUtils {
+export class JsonUtils {
 
     static parseObjectSafe(content: string, defObject?: object): object {
         try {

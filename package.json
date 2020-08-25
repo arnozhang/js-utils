@@ -1,8 +1,8 @@
 {
   "name": "js-utils-lite",
-  "version": "1.0.3",
+  "version": "2.0.0",
   "description": "Utils methods/components for JavaScript.",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "build": "tsc"
   },
@@ -14,6 +14,7 @@
     "JavaScript",
     "Utils"
   ],
+  "types": "lib/index.d.ts",
   "author": "arnozhang",
   "license": "Apache-2.0",
   "bugs": {
