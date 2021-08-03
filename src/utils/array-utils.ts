@@ -1,4 +1,4 @@
-import { JsUtils } from "./js-utils";
+import { JsUtils } from './js-utils';
 
 /**
  * @author arnozhang
@@ -8,28 +8,27 @@ import { JsUtils } from "./js-utils";
 const TAG = 'ArrayUtils';
 
 export class ArrayUtils {
+  static newArray<T>(length: number, value?: T): T[] {
+    return new Array(length).fill(value);
+  }
 
-    static newArray<T>(length: number, value?: T): T[] {
-        return new Array(length).fill(value);
+  static arrayContains(array: any[], value: any): boolean {
+    if (JsUtils.isEmpty(array)) {
+      return false;
     }
 
-    static arrayContains(array: any[], value: any): boolean {
-        if (JsUtils.isEmpty(array)) {
-            return false;
-        }
-
-        for (let item of array) {
-            if (item == value) {
-                return true;
-            }
-        }
-
-        return false;
+    for (let item of array) {
+      if (item == value) {
+        return true;
+      }
     }
 
-    static removeArrayByIndex(array: any[], from: number, to?: number): number {
-        const rest = array.slice((to || from) + 1 || array.length);
-        array.length = from < 0 ? array.length + from : from;
-        return array.push(...rest);
-    }
+    return false;
+  }
+
+  static removeArrayByIndex(array: any[], from: number, to?: number): number {
+    const rest = array.slice((to || from) + 1 || array.length);
+    array.length = from < 0 ? array.length + from : from;
+    return array.push(...rest);
+  }
 }

@@ -1,25 +1,25 @@
 {
-    "compilerOptions": {
-        "target": "es5",
-        "noImplicitAny": true,
-        "noImplicitReturns": true,
-        "suppressImplicitAnyIndexErrors": true,
-        "lib": [
-            "dom",
-            "es5",
-            "es2015"
-        ],
-        "module": "commonjs",
-        "moduleResolution": "node",
-        "declaration": true,
-        "outDir": "./lib",
-        //"sourceMap": true
-    },
-    "exclude": [
-        "node_modules",
-        "lib"
+  "compilerOptions": {
+    "target": "es5",
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "lib": [
+      "dom",
+      "es5",
+      "es2015"
     ],
-    "include": [
-        "src"
-    ],
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "declaration": true,
+    "outDir": "./dist"
+    //"sourceMap": true
+  },
+  "exclude": [
+    "node_modules",
+    "lib"
+  ],
+  "include": [
+    "src"
+  ]
 }

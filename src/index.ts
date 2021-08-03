@@ -3,10 +3,10 @@
  * @date 2020/08/25
  */
 
-export * from "./logger/logger";
+export * from './logger/logger';
 
-export * from "./utils/array-utils";
-export * from "./utils/js-utils";
-export * from "./utils/json-utils";
-export * from "./utils/misc-utils";
-export * from "./utils/string-utils";
+export * from './utils/array-utils';
+export * from './utils/js-utils';
+export * from './utils/json-utils';
+export * from './utils/misc-utils';
+export * from './utils/string-utils';

@@ -1,10 +1,13 @@
 {
   "name": "js-utils-lite",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "Utils methods/components for JavaScript.",
-  "main": "lib/index.js",
+  "main": "index.js",
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "postbuild": "cp package.json dist",
+    "buildpackage": "cp package.json dist && cd dist && npm pack",
+    "publish": "cp package.json dist && cd dist && npm publish"
   },
   "repository": {
     "type": "git",
@@ -14,11 +17,20 @@
     "JavaScript",
     "Utils"
   ],
-  "types": "lib/index.d.ts",
+  "files": [
+    "**/*"
+  ],
+  "types": "index.d.ts",
   "author": "arnozhang",
   "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/arnozhang/js-utils-lite/issues"
   },
-  "homepage": "https://github.com/arnozhang/js-utils-lite#readme"
+  "homepage": "https://github.com/arnozhang/js-utils-lite#readme",
+  "devDependencies": {
+    "babel-loader": "^8.2.2",
+    "prettier": "^2.1.2",
+    "ts-loader": "^9.2.4",
+    "webpack": "^5.48.0"
+  }
 }
